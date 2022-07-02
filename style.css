@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    /* background-color: ; */
+    /* background: url(/images/bg-desktop.png) -66% 72% / 1000px no-repeat hsl(229, 57%, 11%); */
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* border: 2px solid #fff;    */
+    height: 320px;
+    width: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flyo {
+    width: 35%;
+    height: 65%;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 133px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.flyo-icon {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.flyo-icon li {
+    margin-right: 15px;
+    padding: 10px;
+    background-color: hsl(229, 57%, 11%);
+    width: 40px;
+    /* height: 50px; */
+    border-radius: 10px;
+}
+
+.flyo-icon li img {
+    width: 100%;
+}
+
+.flyo-card {
+    margin-left: 20px;
+    width: 65%;
+    height: 50%;
+    background-color: hsl(228, 56%, 26%);
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 25px 30px;
+    position: relative;
+
+}
+
+.flyo-range {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-top: 20px;
+
+}
+
+.flyo-range p {
+    font-size: 16px;
+    color: hsl(210, 2%, 82%);
+
+}
+
+.flyo-range p span {
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.range {
+    padding: 8px;
+    height: 0px;
+    width: 100%;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    margin: 10px 0px;
+    position: relative;
+}
+
+.range::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 84px;
+    top: 2.3px;
+    border-radius: 50%;
+}
+
+.range::before {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2px;
+    padding: 4px 6px;
+    height: 3px;
+    width: 80%;
+    background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+
+.range-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-box {
+    width: 124px;
+    height: 55px;
+    background-color: #fff;
+    position: absolute;
+    right: 38px;
+    top: -40px;
+    border-radius: 8px;
+    color: hsl(229, 7%, 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.info-box b {
+    font-size: 25px;
+    padding: 5px;
+    color: #000;
+}
+
+.info-box::before {
+    content: "";
+    width: 45px;
+    height: 44px;
+    background-color: #ffffff;
+    position: absolute;
+    right: -1px;
+    bottom: -27px;
+    clip-path: polygon(0% 0%, calc(100% - 0.4em) 0%, 100% 0%, calc(100% - 3.4em) 100%, 0% 100%);
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+/* footer here  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 880px) {
+    body {
+        background-color: hsl(229, 57%, 11%);
+        background-image: url(/images/bg-mobile.png);
+        background-size: 100vw 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 90vh;
+        width: 80vw;
+    }
+
+    .flyo {
+        width: 350px;
+        height: 200px;
+        padding-left: 40px;
+    }
+
+    .flyo-card {
+        margin-left: 20px;
+        width: 350px;
+        height: 200px;
+    text-align: center;
+    }
+    .info-box {
+        width: 154px;
+        height: 65px;
+        right: 15vh;
+        top: 150px;
+        font-weight: 700;
+    }
+    .info-box b {
+        font-size: 32px;
+        padding: 5px;
+        color: #000;
+        bottom: 0%;
+    }
+    .info-box::before {
+        display: none;
+    }
+    .range::after {
+        right: 8vh;
+        top: 2.8px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+ 
+    .flyo {
+        width: 90vw;
+        height: 200px;
+        padding-left: 40px;
+    }
+
+    .flyo-card {
+        width: 90vw;
+        height: 200px;
+
+    }
+    .info-box {
+        width: 154px;
+        height: 65px;
+        right: 11vh;
+        top: 150px;
+        font-weight: 700;
+    }
+
+    .info-box b {
+        font-size: 32px;
+        padding: 5px;
+        color: #000;
+        bottom: 0%;
+    }
+
+    .info-box::before {
+        display: none;
+    }
+    .range::after {
+        display: none;
+    }
+}
